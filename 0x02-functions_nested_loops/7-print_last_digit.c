@@ -1,4 +1,4 @@
-#include "main.c"
+#include "main.h"
 
 /**
  * print_last-digit - print last
@@ -11,7 +11,7 @@ int print_last_digit(int n)
 	int ld = n % 10;
 
 	if (ld < 0)
-		ld += -1;
+		ld *= -1;
 
 	_putchar(ld + '0');
 

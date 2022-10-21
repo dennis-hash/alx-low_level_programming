@@ -1,4 +1,5 @@
-#include <main.h>
+#include "main.h"
+#include <stdio.h>
 
 /**
  * main - test func tht print int is positive or negative

@@ -11,18 +11,29 @@
 
 char *create_array(unsigned int size, char c)
 {
-	char *a;
-	unsigned int i;
+	char *buffer;
+	unsigned int position;
 
-	a = malloc(size * sizeof(char));
+	if (size == 0)
+	{
+		return (NULL);
+	}
 
-	if (a == '\0' || size == 0)
-		return ('\0');
+	buffer =  (char *)malloc(size * sizeof(c));
 
-	for (i = 0; i < size; i++)
-		a[i] = c;
+	if (buffer == 0)
+	{
+		return (NULL);
+	}
+	else
+	{
+		position = 0;
+		while (position < size)
+		{
+			*(buffer + position) = c;
+			position++;
+		}
+		return (buffer);
+	}
 
-	return (a);
-
-	free(a);
 }
